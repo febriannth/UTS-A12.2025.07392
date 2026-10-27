@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VINZ Fitness Gym | Not Your Average Gym</title>
+  <meta name="description" content="VINZ Fitness Gym: classes, equipment and expert trainers to help you unleash your potential.">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta property="og:title" content="VINZ Fitness Gym | Not Your Average Gym">
+  <meta property="og:description" content="Classes, equipment and expert trainers to help you unleash your potential.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Manrope:wght@600&family=Outfit&family=PT+Sans&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5.3 (komponen form), dimuat SEBELUM style.css agar gaya kustom tetap menang -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">VINZ FITNESS</a>
+    <button
+      class="nav__toggle"
+      id="navToggle"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#team">Team</a>
+      <a href="#classes">Classes</a>
+      <a href="#contact">Locations</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact" class="btn btn--primary btn--sm">Free Trial</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <img class="hero__bg" src="./assets/img/arnold.jpeg" alt="">
+      <div class="hero__content">
+        <h1>Unleash Your Potential</h1>
+        <a href="#contact" class="btn btn--primary">CLAIM FREE PASS</a>
+        <a href="#about" class="hero__arrow" aria-label="Scroll down"></a>
+      </div>
+      <span class="hero__letter" aria-hidden="true">V</span>
+      <ul class="pills">
+        <li class="pill">
+          <img src="./assets/icons/Barbell.png" alt="" data-fallback="W">
+          Weightlifting
+        </li>
+        <li class="pill">
+          <img src="./assets/icons/game-icons_skipping-rope.svg" alt="" data-fallback="C">
+          classes
+        </li>
+        <li class="pill">
+          <img src="./assets/icons/PersonSimpleRun.png" alt="" data-fallback="G">
+          GYMNASTICS
+        </li>
+      </ul>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__col about__col--head">
+        <h2>Not your average gym</h2>
+        <p>
+          Welcome to VINZ FITNESS GYM, where we are committed to revolutionising the way you approach
+          fitness. Step into our vibrant space that transcends the traditional gym experience.
+        </p>
+        <p>
+          At VINZ FITNESS GYM, we cultivate a dynamic fitness hub that ignites your motivation and
+          empowers you to exceed your fitness aspirations.
+        </p>
+      </div>
+      <div class="about__col">
+        <p>
+          Our range of groundbreaking classes, state-of-the-art equipment, and expert trainers are
+          here to challenge you, drive your progress, and celebrate your achievements.
+        </p>
+        <p>
+          Join us in this fitness journey and witness a transformation like never before. Embrace the
+          evolution at VINZ FITNESS GYM, where every sweat session is a testament to your dedication
+          and a leap towards a stronger, healthier you.
+        </p>
+      </div>
+    </section>
+
+    <section class="usp">
+      <article class="usp__item reveal">
+        <img class="usp__img" src="./assets/img/cbum.png" alt="Trainer helping a member">
+        <div class="usp__card">
+          <h3>Member focused</h3>
+          <p>
+            At VINZ we are dedicated to putting our members first by tailoring our services to meet
+            their individual needs. From personalised training programs to attentive staff members ready
+            to assist at all times, we strive to create a welcoming and supportive environment where
+            members feel valued and motivated to achieve their fitness goals.
+          </p>
+        </div>
+      </article>
+      <article class="usp__item usp__item--rev reveal">
+        <img class="usp__img" src="./assets/img/sigma.jpeg" alt="Athlete lifting a barbell">
+        <div class="usp__card">
+          <h3>Tailored programming</h3>
+          <p>
+            Let's work together to create a comprehensive plan that seamlessly accommodates your family
+            commitments, manages and heals from injuries, and overcomes career obstacles. Regardless of
+            life's challenges, we will navigate a path towards your goals, making the journey as smooth
+            as possible despite the twists and turns along the way.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="offer" id="classes">
+      <h2>What we offer</h2>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="reviews__intro">
+        <h2>What our members say about us</h2>
+        <div class="avatars" id="avatars"></div>
+        <p>100+ 5 Star Reviews</p>
+      </div>
+      <article class="review-card" id="reviewCard" aria-live="polite"></article>
+      <button class="carousel-btn" id="nextReview" aria-label="Next review"></button>
+    </section>
+
+    <div class="promo" id="pricing">
+      <p>
+        50% OFF YOUR FIRST MONTH + RP0 JOINING FEE. USE CODE: <button type="button" id="copyCode"
+        title="Click to copy">PWD0043</button>
+      </p>
+    </div>
+
+    <section class="join">
+      <img class="join__bg" src="./assets/img/wort.jpeg" alt="">
+      <div class="join__content">
+        <p>Join the VINZ community</p>
+        <h2>Be part of<br>something great</h2>
+        <a href="#contact" class="btn btn--outline">Join</a>
+      </div>
+    </section>
+
+    <section class="team" id="team">
+      <header>
+        <h2>The Team</h2>
+        <p>
+          Meet our team! From the owner and amazing personal trainers to the friendly faces you'll see
+          at the front desk.
+        </p>
+      </header>
+      <div class="team__grid" id="teamGrid"></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <img class="contact__bg" src="./assets/img/contact-bg.jpg" alt="">
+      <div class="contact__text">
+        <h2>See what all the hype is about?</h2>
+        <p>Come down and take a look for yourself.</p>
+      </div>
+      <span class="contact__mark" aria-hidden="true">VINZ FITNESS</span>
+      <form class="form" id="regForm" data-bs-theme="dark" novalidate>
+        <h3>Get in touch</h3>
+        <p class="form__sub">Get 50% off your first month</p>
+
+        <!-- a. Nama : input type text -->
+        <div>
+          <label for="regName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="regName" name="nama" placeholder="Nama lengkap" autocomplete="name">
+          <div class="invalid-feedback">Nama wajib diisi (min. 3 karakter).</div>
+        </div>
+
+        <!-- b. Alamat : textarea -->
+        <div>
+          <label for="regAddress" class="form-label">Address</label>
+          <textarea class="form-control" id="regAddress" name="alamat" rows="3" placeholder="Alamat lengkap"></textarea>
+          <div class="invalid-feedback">Alamat wajib diisi (min. 5 karakter).</div>
+        </div>
+
+        <!-- c. Kota : select -->
+        <div>
+          <label for="regCity" class="form-label">City</label>
+          <select class="form-select" id="regCity" name="kota">
+            <option value="" selected>Choose your city.....</option>
+            <option value="Semarang">Semarang</option>
+            <option value="Jakarta">Batang</option>
+            <option value="Kudus">Kudus</option>
+            <option value="Demak">Demak</option>
+            <option value="Pekalongan">Pekalongan</option>
+            <option value="Tegal">Tegal</option>
+            <option value="Surabaya">Surabaya</option>
+            <option value="Jakarta">Jakarta</option>
+          </select>
+          <div class="invalid-feedback">Silakan pilih kota.</div>
+        </div>
+
+        <!-- d. Hobi : checkbox -->
+        <fieldset>
+          <legend class="form-label">Hobi</legend>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobi" id="hobi1" value="Membaca">
+            <label class="form-check-label" for="hobi1">Membaca</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobi" id="hobi2" value="Koding">
+            <label class="form-check-label" for="hobi2">Koding</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobi" id="hobi3" value="Berenang">
+            <label class="form-check-label" for="hobi3">Berenang</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobi" id="hobi4" value="Menggambar">
+            <label class="form-check-label" for="hobi4">Menggambar</label>
+          </div>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobi" id="hobi4" value="Weightlifting">
+            <label class="form-check-label" for="hobi4">Weightlifting</label>
+          </div>
+          <div class="invalid-feedback" id="regHobiError">Pilih minimal satu hobi.</div>
+        </fieldset>
+
+        <div class="form__actions">
+          <button type="reset" class="btn btn--outline btn--sm">RESET</button>
+          <button type="submit" class="btn btn--light btn--sm">DAFTAR</button>
+        </div>
+        <div class="alert alert-success mb-0" id="regResult" role="status" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo">VINZ FITNESS</a>
+    <div class="footer__links">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#reviews">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <hr>
+      <div class="socials" id="socials"></div>
+    </div>
+
+    <div class="footer__legal">
+      <span>Andika Febrianto</span>
+      <p>A12.2025.07392</p>
+      <a href="#home">Privacy &amp; Policy</a>
+      <a href="#home">Terms &amp; Conditions</a>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden></button>
+
+  <noscript>
+    <p class="noscript">Please enable JavaScript to see the services, team and reviews.</p>
+  </noscript>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
